@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+    />
+    <link rel="shortcut icon" href="../png/icon.png" />
+    <link rel="stylesheet" href="../styles/common_style.css" />
+    <link rel="stylesheet" href="../styles/game.css" />
+    <title>Real Spin</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="lifes"></div>
+
+      <div class="shield_bar_cont">
+        <img src="../png/shield.png" alt="shield" />
+        <div class="shield_bar">
+          <div class="inner_shield_bar"></div>
+        </div>
+      </div>
+
+      <img src="" alt="hero" class="hero" />
+      <img src="" alt="enemy" class="enemy" />
+
+      <div class="flask" data-color="blue">
+        <img src="../png/flask_blue.png" alt="flask" />
+        <div>
+          <div>shield</div>
+          <div class="flask_blue_amount"></div>
+        </div>
+      </div>
+
+      <div class="flask" data-color="red">
+        <img src="../png/flask_red.png" alt="flask" />
+        <div>
+          <div>shield</div>
+          <div class="flask_red_amount"></div>
+        </div>
+      </div>
+
+      <div class="balance_field block"></div>
+      <div class="bet_amount block">0</div>
+
+      <div class="control">
+        <a href="./main.html" class="home_link">
+          <img src="../png/home.png" alt="home" />
+        </a>
+        <div class="minus">
+          <img src="../png/button_minus.png" alt="minus" />
+        </div>
+        <div class="play">
+          <img src="../png/button_retry.png" alt="button_retry" />
+        </div>
+        <div class="plus">
+          <img src="../png/button_plus.png" alt="plus" />
+        </div>
+        <div class="auto">
+          <img src="../png/button_auto.png" alt="auto" />
+        </div>
+      </div>
+    </div>
+    <script src="../scripts/game.js" type="module"></script>
+  </body>
+</html>

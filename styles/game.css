@@ -1,0 +1,210 @@
+body {
+  background-image: url("../png/back_main.png");
+  background-size: 100% 100%;
+}
+
+.lifes {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+
+  display: flex;
+  align-items: center;
+}
+
+.lifes img {
+  width: 39px;
+  height: 33px;
+
+  margin-right: 2vw;
+}
+
+.shield_bar_cont {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+
+  height: 40px;
+  width: 160px;
+
+  display: flex;
+  align-items: center;
+}
+
+.shield_bar_cont img {
+  max-height: 100%;
+}
+
+.shield_bar {
+  width: 80%;
+  height: 40%;
+  background: rgba(156, 156, 156, 0.5);
+  border-radius: 6px;
+}
+
+.inner_shield_bar {
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(268.12deg, #0ebdf4 6.55%, #0266b9 93.59%);
+  border-radius: 6px;
+
+  transition: width 0.2s ease;
+}
+
+.hero {
+  position: absolute;
+  left: 3%;
+  bottom: 33%;
+
+  height: 20%;
+
+  transition: left 0.2s ease, opacity 0.5s ease;
+}
+
+.hero img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.enemy {
+  position: absolute;
+  right: 0%;
+  bottom: 33%;
+
+  height: 25%;
+
+  transform: scale(-1, 1);
+  transition: right 0.2s ease, opacity 0.5s ease;
+}
+
+.flask {
+  position: absolute;
+  bottom: 26%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 30%;
+  height: 8%;
+
+  font-size: 3vh;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.flask img {
+  max-height: 100%;
+}
+
+.flask[data-color="blue"] {
+  left: 8%;
+  color: #0266b9;
+}
+
+.flask[data-color="red"] {
+  right: 8%;
+  color: #f24684;
+}
+
+.flask_red_amount,
+.flask_blue_amount {
+  color: white;
+}
+
+.balance_field {
+  position: absolute;
+  left: 0;
+  bottom: 19%;
+}
+
+.balance.anim {
+  color: green;
+}
+
+.bet_amount {
+  position: absolute;
+  right: 0;
+  bottom: 19%;
+
+  width: 180px;
+  height: 50px;
+
+  font-size: 3vh;
+  background-image: url("../png/balance.png");
+}
+
+.control {
+  position: absolute;
+  bottom: 10%;
+
+  width: 100%;
+  height: 8%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control > div {
+  height: 80%;
+}
+
+.control > a {
+  height: 60%;
+}
+
+.control img {
+  height: 100%;
+}
+
+.play {
+  height: 100% !important;
+}
+
+@media screen and (min-height: 600px) {
+  .lifes img {
+    width: 78px;
+    height: 66px;
+  }
+
+  .shield_bar_cont {
+    height: 60px;
+    width: 240px;
+  }
+
+  .balance_field,
+  .bet_amount {
+    width: 240px;
+    height: 75px;
+  }
+}
+
+@media screen and (min-height: 768px) {
+  .flask {
+    width: 20%;
+  }
+
+  .control {
+    bottom: 6%;
+    height: 11%;
+  }
+
+  .shield_bar_cont {
+    height: 80px;
+    width: 320px;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .balance_field,
+  .bet_amount {
+    width: 320px;
+    height: 100px;
+  }
+
+  .hero,
+  .enemy {
+    bottom: 36%;
+  }
+}

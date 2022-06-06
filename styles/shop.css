@@ -1,0 +1,83 @@
+.balance_field {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.balance.anim {
+  color: red;
+}
+
+.home {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.shop {
+  position: absolute;
+  top: 15%;
+  height: 80%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.card {
+  position: relative;
+
+  width: 308px;
+  height: 211px;
+
+  margin: auto auto 5vh;
+
+  background: linear-gradient(180deg, #a0122a 0%, #e4345c 100%);
+  border: 4px solid #ffb800;
+  border-radius: 24px;
+  box-shadow: inset 0px 11px 4px rgba(255, 255, 255, 0.29);
+}
+
+.card img {
+  height: 90%;
+
+  position: absolute;
+  left: 3%;
+  top: 5%;
+}
+
+.price {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+
+  color: #ffd088;
+  font-size: 3vh;
+}
+
+.button {
+  background-image: url("../png/pink_button.png");
+
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+
+  width: 50%;
+  height: 20%;
+}
+
+@media screen and (min-height: 768px) {
+  .card {
+    width: 616px;
+    height: 422px;
+  }
+
+  .balance_field {
+    width: 360px;
+    height: 100px;
+  }
+
+  .home {
+    width: 100px;
+    height: 110px;
+  }
+}

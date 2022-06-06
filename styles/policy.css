@@ -1,0 +1,20 @@
+.header {
+  margin: 4.5vh auto auto;
+  font-weight: 900;
+  font-size: 5vh;
+}
+
+.text {
+  height: 60%;
+  width: 80%;
+  margin: 4.5vh auto auto;
+
+  font-size: 2vh;
+  text-align: left;
+
+  overflow: scroll;
+}
+
+.button {
+  margin: 3vh auto auto;
+}

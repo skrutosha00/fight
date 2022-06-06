@@ -1,0 +1,27 @@
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.game {
+  top: 35%;
+}
+
+.shop {
+  top: 50%;
+}
+
+.balance_field {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media screen and (min-height: 600px) {
+    .balance_field {
+        width: 360px;
+        height: 100px;
+    }
+}
