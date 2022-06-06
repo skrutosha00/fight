@@ -81,9 +81,13 @@ body {
 .enemy_health {
   position: absolute;
   right: 5%;
-  bottom: 60%;
+  bottom: 57%;
 
   height: 5%;
+}
+
+.enemy_health img {
+  max-height: 100%;
 }
 
 .flask {
