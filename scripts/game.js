@@ -4,6 +4,7 @@ setBalanceField()
 
 let body = document.querySelector('.wrapper')
 let healthCont = document.querySelector('.lifes')
+let enemyHealthCont = document.querySelector('.enemy_health')
 let hero = document.querySelector('.hero')
 let enemy = document.querySelector('.enemy')
 let balance = document.querySelector('.balance')
@@ -14,6 +15,7 @@ let active = true
 let health = 6
 let shield = 5
 let level = randInt(1, 3)
+let enemyHealth = randInt(level + 5, level + 12)
 
 updateHealth()
 updateShield()
@@ -41,6 +43,7 @@ playButton.onclick = () => {
 
     shield = 5
     health = 6
+    enemyHealth = randInt(level + 5, level + 12)
     updateHealth()
     updateShield()
 
@@ -98,14 +101,13 @@ function fight() {
         hero.style.left = 'calc(55% - ' + hero.offsetWidth + 'px)'
     }
 
-    let enemyHealth = randInt(level + 5, level + 12)
-
     for (let pers of [hero, enemy]) {
         pers.src = pers.src.replace('.png', '.gif')
     }
 
     let fightInterval = setInterval(() => {
         enemyHealth -= 1
+        updateHealth()
         if (!enemyHealth) {
             clearInterval(fightInterval)
             gameOver(true)
@@ -151,11 +153,18 @@ function gameOver(win) {
 
 function updateHealth() {
     healthCont.innerHTML = ''
+    enemyHealthCont.innerHTML = ''
 
     for (let i = 0; i < Math.ceil(health / 2); i++) {
         let heart = document.createElement('img')
         heart.src = '../png/heart.png'
         healthCont.appendChild(heart)
+    }
+
+    for (let i = 0; i < Math.ceil(enemyHealth / 4); i++) {
+        let heart = document.createElement('img')
+        heart.src = '../png/heart.png'
+        enemyHealthCont.appendChild(heart)
     }
 }
 
